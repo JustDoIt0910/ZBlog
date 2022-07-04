@@ -1,7 +1,7 @@
 package cn.asilentboy.blog.service;
 
 import cn.asilentboy.blog.pojo.Category;
-import cn.asilentboy.blog.utils.Response;
+import cn.asilentboy.blog.utils.http.Response;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

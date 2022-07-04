@@ -3,7 +3,7 @@ package cn.asilentboy.blog.service.Impl;
 import cn.asilentboy.blog.mapper.CategoryMapper;
 import cn.asilentboy.blog.pojo.Category;
 import cn.asilentboy.blog.service.ICategoryService;
-import cn.asilentboy.blog.utils.Response;
+import cn.asilentboy.blog.utils.http.Response;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
