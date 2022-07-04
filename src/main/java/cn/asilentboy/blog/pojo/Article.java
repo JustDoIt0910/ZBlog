@@ -59,6 +59,4 @@ public class Article implements Serializable {
 
     @TableField("commentsCount")
     private Integer commentsCount;
-
-
 }

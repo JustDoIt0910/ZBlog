@@ -3,9 +3,9 @@ package cn.asilentboy.blog.controller;
 
 import cn.asilentboy.blog.dto.ArticleListParam;
 import cn.asilentboy.blog.service.IArticleService;
-import cn.asilentboy.blog.utils.Response;
+import cn.asilentboy.blog.utils.http.Response;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 /**
@@ -22,6 +22,18 @@ public class ArticleController {
 
     @Autowired
     private IArticleService service;
+
+    @PostMapping("/add")
+    @PreAuthorize("hasAuthority('article:add')")
+    public Response addPost() {
+        return null;
+    }
+
+    @PutMapping("/{id}")
+    @PreAuthorize("hasAuthority('article:edit')")
+    public Response editPost(@PathVariable("id") Integer id) {
+        return null;
+    }
 
     @GetMapping("/list")
     public Response getPostList(ArticleListParam param) {
