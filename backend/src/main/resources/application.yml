@@ -1,0 +1,45 @@
+server:
+  port: 9998
+
+spring:
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 100MB
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/zblog?useUnicode=true&charsetEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 20010910cheng
+    hikari:
+      pool-name: HikariCP
+      minimum-idle: 5
+      idle-timeout: 600000
+      maximum-pool-size: 10
+      auto-commit: true
+      max-lifetime: 1800000
+      connection-timeout: 30000
+      connection-test-query: SELECT 1
+
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: cn.asilentboy.blog
+
+oss:
+  bucket: blogv2
+  access-key: UhEnzF8zVQdltdNQN7aoMJK6DShRMK0gwHdlmfg0
+  secret-key: mP9FHM8LrvNGNBKNDtGer4PSX0b7IQKWeHNEU-QZ
+  public-path: http://rei7f0oqi.hd-bkt.clouddn.com
+
+webinfo:
+  avatar: http://rei7f0oqi.hd-bkt.clouddn.com/avatar.jpg
+  slogan: 学会根据天上的星星，而不是过往船只的灯光来辨别航行的方向
+  name: JustDoIt0910′s blog
+  domain: http://asilentboy.cn
+  notice:
+  desc: 一个It技术的探索者
+
+
+
+
